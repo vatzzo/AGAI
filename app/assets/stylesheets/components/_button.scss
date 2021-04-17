@@ -1,0 +1,16 @@
+.button {
+    padding: 1rem 2rem;
+    font-weight: 500;
+
+    &__action {
+        border: solid 0.3rem $color-grey-dark;
+        color: $color-grey-dark;
+        font-weight: 500;
+
+        border-radius: 10rem;
+
+        &--full {
+            background-color: $color-grey-dark;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// Reset / Normalize
+*, 
+*:after, 
+*:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // Set 10px as default
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
