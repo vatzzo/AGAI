@@ -1,5 +1,5 @@
 // DEFAULT
-$color-white: rgb(245, 245, 245);
+$color-white: rgb(250, 250, 250);
 $color-black: rgb(10,10,10);
 
 // GREYS
@@ -18,3 +18,12 @@ $color-sec-dark: #ff7730;
 
 $color-ter-light: #2998ff;
 $color-ter-dark: #5643fa;
+
+// Lengths 
+    // header
+$header_height: 6rem;
+
+    // card
+$card_width: 25rem;
+$card_height: 20rem; 
+$item_gap: 3rem;

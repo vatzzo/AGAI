@@ -1,0 +1,23 @@
+.card {
+    width: $card_width;
+    height: $card_height;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(black, 0.25);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: $color-grey-very-light; 
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,47 @@
+.container {
+    &__content {
+        margin-top: $header_height;
+        padding: 10rem 15rem;
+        background-color: $color-white;
+        min-height: 100vh;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__item {
+        &:not(:first-child) {
+            margin-left: $item_gap;
+        }
+    }
+}
+
+// margins
+
+.margin-bottom-medium {
+    margin-top: 0 3rem;
+}
+
+// notice alert
+.message {
+    position: absolute;
+    top: $header_height;
+    left: 0;
+    display: block;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    
+    &--alert {
+        background-color: rgb(245, 200, 200);
+        color: rgb(220, 40, 40)
+    }
+
+    &--notice {
+        background-color: rgb(200, 245, 200);
+        color: rgb(40,220,40)
+    }
+}

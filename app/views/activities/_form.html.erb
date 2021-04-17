@@ -1,0 +1,14 @@
+<%= render "layouts/messages" %>
+<%= form_with model: @activity, class:'form' do |form| %>
+    <h1 class='form__header'>Activity</h1>
+    <div class='form__item'>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+    </div>
+     <%= link_to "x", :back, class:'back button button__action--back' %>
+  <%= form.submit class:'submit' %>
+<% end %>
