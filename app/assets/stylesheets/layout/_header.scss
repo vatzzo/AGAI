@@ -4,7 +4,8 @@
     left: 0;
     height: $header_height;
     width: 100%;
-    background-color: $color-grey-very-light;
+    background-color: white;
+    border-bottom: solid 0.3rem $color-grey-very-light;
     padding: 0 5rem;
     display: flex;
     justify-content: center;

@@ -1,12 +1,12 @@
 .form {
     position: relative;
-    background-color: $color-grey-very-light;
+    background-color: white;
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 8px;
-    box-shadow: 0.3rem 0.3rem 1rem rgba($color-black, 0.3);
+    box-shadow: 0.3rem 0.3rem 1rem rgba($color-black, 0.2);
     width: 60rem;
     margin: 0 auto;
 
@@ -33,7 +33,6 @@
             outline: none;
         }
     }
-
 
     label {
         font-weight: bold;
@@ -67,5 +66,9 @@
         &--column {
             flex-direction: column;
         }
+    }
+
+    &--login {
+        // background: linear-gradient(to right bottom, $color-pri, $color-pri-dark);
     }
 }

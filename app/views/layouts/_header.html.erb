@@ -20,6 +20,11 @@
         </li>
     </ul>
     <div class='header-info'>
-        <a class='button button__action button__action--1'>Sing in</a>
+         <% if !current_user %>
+            <%= link_to 'Sign in',  new_user_session_path, class: 'button button__action button__action--1' %>
+            <%= link_to 'Sing up', new_user_registration_path, class: 'button button__action button__action--1' %>
+        <% else %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'button button__action button__action--1' %>
+        <% end %>
     </div>
 </nav>
