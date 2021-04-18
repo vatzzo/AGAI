@@ -4,7 +4,7 @@
     <% @activities.each do |activity| %>
     <div class='card gallery__item'>
         <p class='card__title'><%= activity.title %></p>
-        <p class='card__description margin-bottom-medium'><%= activity.description %></p>
+        <p class='card__description margin-bottom-medium'>author: <%= activity.user %></p>
         <%= link_to "delete", activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'button button__action button__action--remove' %>
         <%= link_to "details", activity_path(activity), class:'button button__action button__action--show' %>
     </div>

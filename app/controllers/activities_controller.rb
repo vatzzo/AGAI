@@ -12,7 +12,10 @@ class ActivitiesController < ApplicationController
     end
 
     def create 
-        @activity = Activity.create(activity_params)
+        @activity = Activity.new(activity_params)
+        @activity.user = current_user
+        @activity.save
+
         unless @activity.errors.any?
             flash[:notice]='New activity has been added.' 
             redirect_to activities_path
