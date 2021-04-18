@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'home#show'
 
   resources :activities, except: :edit
+  resources :steps, except: :edit
 end

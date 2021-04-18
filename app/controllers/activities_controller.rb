@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
 
     def show
         activity
+        @steps = Step.where(activity_id: activity.id)
     end
 
     def new
@@ -26,7 +27,7 @@ class ActivitiesController < ApplicationController
     end
 
     def update
-        activity.update(company_params)
+        activity.update(activity_params)
         redirect_to activities_path, notice: 'Activity has been updated.'
     end
 

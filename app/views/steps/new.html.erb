@@ -1,0 +1,15 @@
+<%= render "layouts/messages" %>
+<%= form_with model: @step, class:'form' do |form| %>
+    <h1 class='form__header'>Step</h1>
+    <div class='form__item'>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :content %>
+        <%= form.rich_text_area :content %>
+    </div>
+    <%= hidden_field_tag(:activity_id, @activity_id) %>
+    <%= link_to "x", :back, class:'back button button__action--back' %>
+  <%= form.submit class:'submit'%>
+<% end %>
