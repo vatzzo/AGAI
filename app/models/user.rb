@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :activities, dependent: :destroy
+  has_one_attached :avatar
 
   def to_s
     email

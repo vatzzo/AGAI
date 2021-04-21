@@ -1,6 +1,16 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form' }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <h1>Edit your data</h1>
+
+  <div class='form__avatar'>
+      <%= image_tag user_avatar(resource, 100) %>
+  </div>
+
+  <div class='form__item'>
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
   <div class="form__item">
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -29,10 +39,11 @@
   </div>
 
   <%= f.submit "Update", class:'submit' %>
-
-  <p>Cancel my account</p>
-  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-  <%= link_to "Back", :back %>
 <% end %>
+
+
+<p>Cancel my account</p>
+<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+<%= link_to "Back", :back %>
 
 
