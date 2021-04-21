@@ -9,21 +9,21 @@
         <li class='header-links__link'>
             <%= link_to 'Home', root_path %>
         </li>
-        <li class='header-links__link'>
-            <%= link_to 'About', root_path %>
-        </li>
-        <li class='header-links__link'>
-            <%= link_to 'Learn', root_path %>
-        </li>
-        <li class='header-links__link'>
-            <%= link_to 'Activities', activities_path %>
-        </li>
-        <li class='header-links__link'>
-            <%= link_to 'Dashboard', dashboard_path %>
-        </li>
-        <li class='header-links__link'>
-            <%= link_to 'Settings', edit_user_registration_path %>
-        </li>
+        <% if !current_user %>
+            <li class='header-links__link'>
+                <%= link_to 'About', root_path %>
+            </li>
+        <% else %>
+            <li class='header-links__link'>
+                <%= link_to 'Activities', activities_path %>
+            </li>
+            <li class='header-links__link'>
+                <%= link_to 'Dashboard', dashboard_path %>
+            </li>
+            <li class='header-links__link'>
+                <%= link_to 'Settings', edit_user_registration_path %>
+            </li>
+        <% end %>
     </ul>
     <div class='header-info'>
          <% if !current_user %>
