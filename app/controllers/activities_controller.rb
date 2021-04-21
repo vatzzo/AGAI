@@ -1,11 +1,17 @@
 class ActivitiesController < ApplicationController
     def index
-        @activities = Activity.all
+        @activities = current_user.activities
     end
 
-    def show
+    def show 
         activity
-        @steps = Step.where(activity_id: activity.id)
+        steps
+    end
+
+    def edit
+        activity
+        steps
+        @user = activity.user
     end
 
     def new
@@ -40,6 +46,10 @@ class ActivitiesController < ApplicationController
 
     def activity
         @activity = Activity.find(params[:id]) 
+    end
+
+    def steps
+        @steps = Step.where(activity: activity)
     end
 
     # Only allow a list of trusted parameters through.

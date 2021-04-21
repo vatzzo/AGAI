@@ -1,0 +1,10 @@
+<h1> Dashboard </h1>
+<div class='gallery'>
+    <% @activities.each do |activity| %>
+    <div class='card gallery__item'>
+        <p class='card__title'><%= activity.title %></p>
+        <p class='card__description margin-bottom-medium'>author: <%= activity.user %></p>
+        <%= link_to "details", activity_path(activity), class:'button button__action button__action--show' %>
+    </div>
+    <% end %>
+</div>

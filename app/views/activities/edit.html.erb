@@ -1,0 +1,20 @@
+<%= form_with model: @activity, class:'form' do |form| %>
+    <h1 class='form__header'>Activity</h1>
+    <div class='form__item'>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :description %>
+        <%= form.rich_text_area :description %>
+    </div>
+    <h1 class='form__header'>Steps</h1>
+    <ul class='form__list'>
+        <% @steps.each do |step| %>
+            <li><%= step.title %> <%= link_to "delete", step, method: :delete %><%= link_to "details", step %></li>
+        <% end %>
+        <li> <%= link_to "Add New", new_step_path(activity_id: @activity.id)%> </li>
+    </ul>
+    <%= link_to "x", activities_path, class:'back button button__action--back' %>
+  <%= form.submit  class:'submit' %>
+<% end %>
