@@ -1,10 +1,21 @@
-<h1><%= @activity.title %><h1>
-<p>
-  <%= @activity.description %>
-</p>
-<ul>
-  <% @steps.each do |step| %>
-    <li><%= step.title %></li>
-  <% end %>
-</ul>
-<%= link_to "Back", :back %>
+<section class='activities activities__show'>
+  <div class='activity'>
+    <h1 class='activity__title'><%= @activity.title %><h1>
+
+    <div class='activity__user'>
+      <%= image_tag user_avatar(current_user, 100), class: 'avatar avatar--small' %>
+      <p><%= current_user.email %></p>
+    </div>
+
+    <div class='activity__description'><%= @activity.description %></div>
+
+    <h1 class='activity__subtitle'>Steps</h1>
+
+    <ul class='activity__steps'>
+      <% @steps.each do |step| %>
+        <li><%= step.title %><%= link_to "details", root_path, class:'' %></li>
+      <% end %>
+    </ul>
+    <%= link_to "x", :back, class: 'button button__action--close' %>
+  </div>
+</section>

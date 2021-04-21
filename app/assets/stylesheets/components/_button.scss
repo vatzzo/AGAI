@@ -23,12 +23,18 @@
         &--remove {
             border: none;
             color: $color-sec-dark;
-
-        }   
+        }
 
         &--show {
             border: none;
             color: $color-ter-dark;
+        }
+
+        &--close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 3rem;
         }
     }
 }

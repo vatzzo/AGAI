@@ -38,7 +38,7 @@
     padding: 1rem 2rem;
     width: 100%;
     text-align: center;
-    
+
     &--alert {
         background-color: rgb(245, 200, 200);
         color: rgb(220, 40, 40)
@@ -47,5 +47,19 @@
     &--notice {
         background-color: rgb(200, 245, 200);
         color: rgb(40,220,40)
+    }
+}
+
+// User avatar
+.avatar {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: solid 0.3rem white;
+
+    &--small {
+        width: 5rem;
+        height: 5rem;
     }
 }

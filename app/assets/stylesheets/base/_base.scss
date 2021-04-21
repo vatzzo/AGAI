@@ -1,6 +1,6 @@
 // Reset / Normalize
-*, 
-*:after, 
+*,
+*:after,
 *:before {
     padding: 0;
     margin: 0;
@@ -10,6 +10,7 @@
 html {
     // Set 10px as default
     font-size: 62.5%;
+    font-weight: 400;
 }
 
 body {

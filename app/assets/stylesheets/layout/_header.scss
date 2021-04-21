@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 
     &__logo {
         flex: 0 0 33%;
@@ -22,7 +23,7 @@
                 height: 5rem;
                 margin-top: 0.5rem;
             }
-    
+
             p {
                 padding: 1rem;
                 font-size: 2rem;
@@ -44,7 +45,7 @@
                 text-decoration: none;
                 color: $color-grey-dark;
                 font-weight: 400;
-                &:hover { 
+                &:hover {
                     font-weight: 500;
                     color: $color-pri;
                 }
@@ -61,4 +62,3 @@
 
 
 
- 
