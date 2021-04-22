@@ -52,11 +52,12 @@
 
 // User avatar
 .avatar {
-    display: block;
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
     border: solid 0.3rem white;
+    object-fit: cover;
+    object-position: center;
 
     &--small {
         width: 5rem;

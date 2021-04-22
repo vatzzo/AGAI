@@ -58,3 +58,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # For authentication
 gem 'devise'
 
+# For Active Storage validations
+gem 'active_storage_validations'
+
+# For Processing the images
+  # Remember to install iamgemagic
+gem 'image_processing'

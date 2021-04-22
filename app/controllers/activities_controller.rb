@@ -3,7 +3,7 @@ class ActivitiesController < ApplicationController
         @activities = current_user.activities
     end
 
-    def show 
+    def show
         activity
         steps
     end
@@ -18,13 +18,13 @@ class ActivitiesController < ApplicationController
         @activity = Activity.new
     end
 
-    def create 
+    def create
         @activity = Activity.new(activity_params)
         @activity.user = current_user
         @activity.save
 
         unless @activity.errors.any?
-            flash[:notice]='New activity has been added.' 
+            flash[:notice]='New activity has been added.'
             redirect_to activities_path
         else
             flash[:alert] = @activity.errors.full_messages.first
@@ -42,10 +42,10 @@ class ActivitiesController < ApplicationController
         redirect_to activities_path, notice: 'Activity has been deleted.'
     end
 
-    private 
+    private
 
     def activity
-        @activity = Activity.find(params[:id]) 
+        @activity = Activity.find(params[:id])
     end
 
     def steps
@@ -54,6 +54,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-        params.require(:activity).permit(:title, :description)
+        params.require(:activity).permit(:title, :description, :image)
     end
 end

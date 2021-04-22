@@ -8,6 +8,10 @@
         <%= form.label :description %>
         <%= form.rich_text_area :description %>
     </div>
+    <div class='form__item'>
+        <label>Image</label>
+        <%= form.file_field :image %>
+    </div>
      <%= link_to "x", :back, class:'back button button__action--back' %>
   <%= form.submit class:'submit' %>
 <% end %>

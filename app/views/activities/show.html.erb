@@ -7,9 +7,15 @@
       <p><%= current_user.email %></p>
     </div>
 
+    <% if @activity.image.attached? %>
+      <%= image_tag @activity.image, class:'activity__image' %>
+    <% end %>
+
     <div class='activity__description'><%= @activity.description %></div>
 
-    <h1 class='activity__subtitle'>Steps</h1>
+    <% unless @steps.empty? %>
+      <h1 class='activity__subtitle'>Steps</h1>
+    <% end %>
 
     <ul class='activity__steps'>
       <% @steps.each do |step| %>

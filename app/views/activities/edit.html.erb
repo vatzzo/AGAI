@@ -8,10 +8,21 @@
         <%= form.label :description %>
         <%= form.rich_text_area :description %>
     </div>
+
+    <% if @activity.image.attached? %>
+      <%= image_tag @activity.image, width: '600px' %>
+    <% end %>
+
+    <div class='form__item'>
+        <label>Image</label>
+        <%= form.file_field :image %>
+    </div>
     <h1 class='form__header'>Steps</h1>
     <ul class='form__list'>
         <% @steps.each do |step| %>
-            <li><%= step.title %> <%= link_to "delete", step, method: :delete %><%= link_to "details", step %></li>
+            <li>
+                <%= step.title %><%= link_to "delete", step, method: :delete %><%= link_to "details", step %>
+            </li>
         <% end %>
         <li> <%= link_to "Add New", new_step_path(activity_id: @activity.id)%> </li>
     </ul>

@@ -1,7 +1,7 @@
 module ApplicationHelper
   def user_avatar(user, size=100)
     if user.avatar.attached?
-      user.avatar.variant(:gravity=>"Center", resize: "#{size}x#{size}")
+      user.avatar.variant(resize_to_limit: [size, size])
     else
       'default_avatar'
     end

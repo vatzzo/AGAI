@@ -7,7 +7,6 @@
         border: solid 0.3rem $color-grey-dark;
         color: $color-grey-dark;
         font-weight: 500;
-
         border-radius: 10rem;
 
         &--full {
@@ -21,11 +20,19 @@
         }
 
         &--remove {
+            background-color: $color-white;
             border: none;
             color: $color-sec-dark;
         }
 
         &--show {
+            background-color: $color-white;
+            border: none;
+            color: $color-ter-dark;
+        }
+
+        &--edit {
+            background-color: $color-white;
             border: none;
             color: $color-ter-dark;
         }

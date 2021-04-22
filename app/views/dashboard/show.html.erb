@@ -2,9 +2,12 @@
 <div class='gallery'>
     <% @activities.each do |activity| %>
     <div class='card gallery__item'>
+        <%= image_tag activity.image, class:'card__image' %>
         <p class='card__title'><%= activity.title %></p>
-        <p class='card__description margin-bottom-medium'>author: <%= activity.user %></p>
-        <%= link_to "details", activity_path(activity), class:'button button__action button__action--show' %>
+        <p class='card__user'><%= image_tag user_avatar(current_user, 100), class: 'avatar avatar--small' %><span><%= activity.user %></span></p>
+        <div class='card__actions'>
+            <%= link_to "details", activity_path(activity), class:'button button__action button__action--show' %>
+        </div>
     </div>
     <% end %>
 </div>
