@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :activities, dependent: :destroy
   has_one_attached :avatar
 
-  validates :image, content_type: [:png, :jpg, :jpeg]
+  validates :avatar, content_type: [:png, :jpg, :jpeg]
 
   def to_s
     email

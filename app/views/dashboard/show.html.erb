@@ -6,7 +6,9 @@
         <p class='card__title'><%= activity.title %></p>
         <p class='card__user'><%= image_tag user_avatar(current_user, 100), class: 'avatar avatar--small' %><span><%= activity.user %></span></p>
         <div class='card__actions'>
-            <%= link_to "details", activity_path(activity), class:'button button__action button__action--show' %>
+            <%= link_to activity_path(activity), class:'button button__action button__action--edit' do %>
+                <i class="fas fa-info-circle"></i>
+            <% end %>
         </div>
     </div>
     <% end %>

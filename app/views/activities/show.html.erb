@@ -19,7 +19,12 @@
 
     <ul class='activity__steps'>
       <% @steps.each do |step| %>
-        <li><%= step.title %><%= link_to "details", root_path, class:'' %></li>
+        <li>
+          <%= step.title %>
+            <%= link_to root_path, class:'button button__action button__action--edit' do %>
+              <i class="fas fa-info-circle"></i>
+            <% end %>
+        </li>
       <% end %>
     </ul>
     <%= link_to "x", :back, class: 'button button__action--close' %>
