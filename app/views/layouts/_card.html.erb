@@ -1,0 +1,18 @@
+<div class='card gallery__item'>
+    <%= image_tag activity.image, class:'card__image' %>
+    <p class='card__title'><%= activity.title %></p>
+    <p class='card__user'><%= image_tag user_avatar(activity.user, 100), class: 'avatar avatar--small' %><span><%= activity.user %></span></p>
+    <div class='card__actions'>
+        <% if current_user == activity.user %>
+            <%= link_to activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'button button__action button__action--remove' do %>
+                <i class="fas fa-trash"></i>
+            <% end %>
+            <%= link_to activity_path(activity), class:'button button__action button__action--edit' do %>
+                <i class="fas fa-info-circle"></i>
+            <% end %>
+        <% end %>
+        <%= link_to edit_activity_path(activity), class:'button button__action button__action--show' do %>
+            <i class="fas fa-edit"></i>
+        <% end %>
+    </div>
+</div>

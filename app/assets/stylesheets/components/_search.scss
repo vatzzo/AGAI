@@ -1,0 +1,25 @@
+.search {
+  width: 50rem;
+  margin: 2rem auto;
+  font-size: 2rem;
+
+  input {
+    padding: 1rem 2rem;
+    width: 40rem;
+    border-radius: 8px;
+    border: solid 0.1rem $color-grey-light;
+    display: inline-block;
+  }
+
+  &__submit {
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 8px;
+    border: solid 0.1rem $color-grey-light;
+
+    i {
+      color: black;
+      font-size: inherit;
+    }
+  }
+}

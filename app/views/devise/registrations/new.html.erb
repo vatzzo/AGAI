@@ -2,6 +2,8 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <h1 class='form__header'>Sign up</h1>
 
+  <%= hidden_field_tag :avatar, value: 'default_avatar' %>
+
   <div class="form__item">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

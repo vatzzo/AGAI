@@ -10,7 +10,6 @@
     width: 60rem;
     margin: 0 auto;
 
-
     &__header {
         text-align: center;
         margin-bottom: 1rem;
@@ -74,7 +73,7 @@
             list-style-type: none;
             padding: 1rem 2rem;
             border: solid 0.1rem $color-grey-light;
-            
+
             &:last-child {
                 border-bottom-left-radius: 8px;
                 border-bottom-right-radius: 8px;
@@ -89,9 +88,5 @@
                 border-bottom: none;
             }
         }
-    }
-
-    &--login {
-        // background: linear-gradient(to right bottom, $color-pri, $color-pri-dark);
     }
 }

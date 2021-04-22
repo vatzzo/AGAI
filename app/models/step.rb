@@ -1,5 +1,5 @@
 class Step < ApplicationRecord
-    validates :title, :content, :activity, presence: true
-    
     belongs_to :activity
+
+    validates :title, :content, :activity, presence: true
 end

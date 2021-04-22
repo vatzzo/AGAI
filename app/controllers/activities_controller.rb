@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
     def index
-        @activities = current_user.activities
+        activities
     end
 
     def show
@@ -43,6 +43,12 @@ class ActivitiesController < ApplicationController
     end
 
     private
+
+    def activities
+        @activities = Activity.where(user: current_user)
+        @activities = @activities.where("lower(title) LIKE ?", "%" + params[:query].downcase + "%") unless params[:query].nil?
+
+    end
 
     def activity
         @activity = Activity.find(params[:id])
