@@ -71,7 +71,6 @@ ActiveRecord::Schema.define(version: 2021_04_23_204454) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "is_done", default: false, null: false
-    t.string "short_description", null: false
     t.index ["activity_id"], name: "index_steps_on_activity_id"
   end
 

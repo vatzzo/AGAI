@@ -9,14 +9,14 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     width: 100%;
 
     &__item {
-        &:not(:first-child) {
-            margin-left: $item_gap;
-        }
+        margin: $item_gap;
     }
 }
+
 
 // margins
 

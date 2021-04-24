@@ -64,3 +64,6 @@ gem 'active_storage_validations'
 # For Processing the images
   # Remember to install iamgemagic
 gem 'image_processing'
+
+# For fake info for seeds
+gem 'faker'

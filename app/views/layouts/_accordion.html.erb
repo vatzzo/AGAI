@@ -3,10 +3,9 @@
       <div class="accordion-item">
         <button id="accordion-button-1" aria-expanded="false"><%= element.title %><i class="fas fa-search"></i></button>
         <div class="accordion-content">
-          <p>
-            <%= element.short_description %>
-            <%= link_to "show", activity_step_path(@activity, element) %>
-          </p>
+          <div>
+            <%= element.content %>
+          </div>
         </div>
       </div>
   <% end %>
