@@ -18,7 +18,9 @@
       <%= render "layouts/accordion", elements: @activity.steps %>
     <% end %>
 
-    <%= link_to "x", :back, class: 'button button__action--close' %>
+    <%= link_to activities_path, class:'back' do %>
+        <i class="fas fa-times-circle"></i>
+     <% end %>
   </div>
 </section>
 

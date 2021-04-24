@@ -47,8 +47,8 @@ users.each do |user|
   user.avatar.attach(io: File.open(avatar[:src]), filename: avatar[:file_name])
 end
 
-if Activity.all.count <= 9
-  9.times do
+if Activity.all.count <= 20
+  20.times do
     email= users[rand(0..users.length-1)][:email]
 
     activity = Activity.new(

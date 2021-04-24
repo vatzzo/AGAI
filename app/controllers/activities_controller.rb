@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
     def index
-        activities
+        @pagy, @activities = pagy(activities, items: 10)
     end
 
     def show
@@ -42,8 +42,12 @@ class ActivitiesController < ApplicationController
     private
 
     def activities
-        @activities = Activity.where(user: current_user).order(:deadline)
-        @activities = @activities.where("lower(title) LIKE ?", "%" + params[:query].downcase + "%") unless params[:query].nil?
+        activities = Activity.all.where(user: current_user).order(:deadline)
+        if params[:query].nil?
+            activities
+        else
+            activities.where("lower(title) LIKE ?", "%" + params[:query].downcase + "%") unless params[:query].nil?
+        end
     end
 
     def activity

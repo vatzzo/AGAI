@@ -67,3 +67,6 @@ gem 'image_processing'
 
 # For fake info for seeds
 gem 'faker'
+
+# For pagination
+gem 'pagy', '~> 3.5'
