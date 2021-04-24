@@ -18,6 +18,10 @@
             <%= form.check_box :is_done %>
         </div>
     <% end %>
-    <%= link_to "x", :back, class:'back button button__action--back' %>
+
+     <%= link_to activities_path, class:'back' do %>
+        <i class="fas fa-times-circle"></i>
+     <% end %>
+
   <%= form.submit class:'submit'%>
 <% end %>

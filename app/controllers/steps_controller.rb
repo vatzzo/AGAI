@@ -27,7 +27,7 @@ class StepsController < ApplicationController
 
     def update
         step.update(step_params)
-        redirect_to root_path, notice: 'Step has been updated.'
+        redirect_to edit_activity_path(@step.activity), notice: 'Step has been updated.'
     end
 
     def destroy

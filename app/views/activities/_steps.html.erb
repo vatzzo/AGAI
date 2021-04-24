@@ -1,0 +1,38 @@
+  <ul class='form__list'>
+      <li>TO DO</li>
+      <% @activity.steps.where(is_done: false).each do |step| %>
+          <li>
+              <%= step.title %>
+              <span class='actions'>
+                <%= link_to activity_step_path(@activity, step), method: :delete, class: 'button button__action--remove' do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
+                <%= link_to edit_activity_step_path(@activity, step), class: 'button button__action--edit' do %>
+                  <i class="fas fa-edit"></i>
+                <% end %>
+              </span>
+          </li>
+      <% end %>
+      <li>
+          <%= link_to new_activity_step_path(@activity) do %>
+            <i class="fas fa-plus button__action--edit"></i>
+          <% end %>
+      </li>
+  </ul>
+
+  <ul class='form__list'>
+      <li>DONE</li>
+      <% @activity.steps.where(is_done: true).each do |step| %>
+          <li>
+              <%= step.title %>
+              <span class='actions'>
+                <%= link_to activity_step_path(@activity, step), method: :delete, class: 'button button__action--remove' do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
+                <%= link_to edit_activity_step_path(@activity, step), class: 'button button__action--edit' do %>
+                  <i class="fas fa-edit"></i>
+                <% end %>
+              </span>
+          </li>
+      <% end %>
+  </ul>

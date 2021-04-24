@@ -15,8 +15,9 @@
 
     <% unless @activity.steps.empty? %>
       <h1 class='activity__subtitle'>Steps</h1>
+      <%= render "layouts/accordion", elements: @activity.steps.where(is_done: true) %>
     <% end %>
-      <%= render "layouts/accordion", elements: @activity.steps %>
+
     <%= link_to "x", :back, class: 'button button__action--close' %>
   </div>
 </section>
