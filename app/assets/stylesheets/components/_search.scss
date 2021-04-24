@@ -4,15 +4,19 @@
   font-size: 2rem;
 
   input {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     width: 40rem;
     border-radius: 8px;
     border: solid 0.1rem $color-grey-light;
     display: inline-block;
+
+    &:focus, &:active {
+      outline: none;
+    }
   }
 
   &__submit {
-    padding: 1rem;
+    padding: 1.5rem;
     display: inline-block;
     border-radius: 8px;
     border: solid 0.1rem $color-grey-light;
@@ -20,6 +24,10 @@
     i {
       color: black;
       font-size: inherit;
+    }
+
+    &:focus, &:active {
+      outline: none;
     }
   }
 }

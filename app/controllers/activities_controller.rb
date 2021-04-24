@@ -5,13 +5,10 @@ class ActivitiesController < ApplicationController
 
     def show
         activity
-        steps
     end
 
     def edit
         activity
-        steps
-        @user = activity.user
     end
 
     def new
@@ -23,12 +20,12 @@ class ActivitiesController < ApplicationController
         @activity.user = current_user
         @activity.save
 
-        unless @activity.errors.any?
+        if @activity.errors.any?
+            flash[:alert] = @activity.errors.full_messages
+            render :new
+        else
             flash[:notice]='New activity has been added.'
             redirect_to activities_path
-        else
-            flash[:alert] = @activity.errors.full_messages.first
-            render :new
         end
     end
 
@@ -45,21 +42,16 @@ class ActivitiesController < ApplicationController
     private
 
     def activities
-        @activities = Activity.where(user: current_user)
+        @activities = Activity.where(user: current_user).order(:deadline)
         @activities = @activities.where("lower(title) LIKE ?", "%" + params[:query].downcase + "%") unless params[:query].nil?
-
     end
 
     def activity
         @activity = Activity.find(params[:id])
     end
 
-    def steps
-        @steps = Step.where(activity: activity)
-    end
-
     # Only allow a list of trusted parameters through.
     def activity_params
-        params.require(:activity).permit(:title, :description, :image)
+        params.require(:activity).permit(:title, :description, :image, :deadline, :is_public)
     end
 end

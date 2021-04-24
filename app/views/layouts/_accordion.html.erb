@@ -1,0 +1,31 @@
+<div class="accordion">
+  <% elements.each do |element| %>
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false"><%= element.title %><i class="fas fa-search"></i></button>
+        <div class="accordion-content">
+          <p>Short Description</p>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+
+<script>
+  const items = document.querySelectorAll(".accordion button");
+
+  function toggleAccordion() {
+    const itemToggle = this.getAttribute('aria-expanded');
+
+    items.forEach( item => {
+      item.setAttribute('aria-expanded', 'false');
+    });
+
+    if (itemToggle == 'false') {
+      this.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', toggleAccordion)
+  });
+</script>

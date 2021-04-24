@@ -1,0 +1,45 @@
+<%= form_with model: @activity, class:'form' do |form| %>
+    <h1 class='form__header'>Activity</h1>
+
+    <% if type == :edit %>
+      <div class='form__item'>
+          <%= form.label :is_public %>
+          <%= form.check_box :is_public %>
+      </div>
+    <% end %>
+
+    <div class='form__item'>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :description %>
+        <%= form.rich_text_area :description %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :deadline %>
+        <%= form.date_field :deadline %>
+    </div>
+    <% if @activity.image.attached? %>
+        <%= image_tag @activity.image, width: '400px' %>
+    <% end %>
+    <div class='form__item'>
+        <label>Image</label>
+        <%= form.file_field :image %>
+    </div>
+
+    <% if type == :edit %>
+      <h1 class='form__header'>Steps</h1>
+      <ul class='form__list'>
+          <% @activity.steps.each do |step| %>
+              <li>
+                  <%= step.title %> <%= link_to "delete", activity_step_path(@activity, step), method: :delete %> <%= link_to "details", edit_activity_step_path(@activity, step) %>
+              </li>
+          <% end %>
+          <li> <%= link_to "add", new_activity_step_path(@activity) %> </li>
+      </ul>
+    <% end %>
+
+     <%= link_to "x", :back, class:'back button button__action--back' %>
+  <%= form.submit class:'submit' %>
+<% end %>

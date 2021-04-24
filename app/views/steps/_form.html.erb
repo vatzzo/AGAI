@@ -1,0 +1,23 @@
+<%= form_with model: [:activity, @step], class:'form' do |form| %>
+    <h1 class='form__header'>Step</h1>
+    <div class='form__item'>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :short_description %>
+        <%= form.text_field :short_description %>
+    </div>
+    <div class='form__item'>
+        <%= form.label :content %>
+        <%= form.rich_text_area :content %>
+    </div>
+    <% if type == :edit %>
+        <div class='form__item'>
+            <%= form.label :is_done %>
+            <%= form.check_box :is_done %>
+        </div>
+    <% end %>
+    <%= link_to "x", :back, class:'back button button__action--back' %>
+  <%= form.submit class:'submit'%>
+<% end %>

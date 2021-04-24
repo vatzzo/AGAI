@@ -13,20 +13,14 @@
 
     <div class='activity__description'><%= @activity.description %></div>
 
-    <% unless @steps.empty? %>
+    <% unless @activity.steps.empty? %>
       <h1 class='activity__subtitle'>Steps</h1>
     <% end %>
-
-    <ul class='activity__steps'>
-      <% @steps.each do |step| %>
-        <li>
-          <%= step.title %>
-            <%= link_to root_path, class:'button button__action button__action--edit' do %>
-              <i class="fas fa-info-circle"></i>
-            <% end %>
-        </li>
-      <% end %>
-    </ul>
+      <%= render "layouts/accordion", elements: @activity.steps %>
     <%= link_to "x", :back, class: 'button button__action--close' %>
   </div>
 </section>
+
+
+
+

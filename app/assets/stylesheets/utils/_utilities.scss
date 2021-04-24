@@ -1,6 +1,5 @@
 .container {
     &__content {
-        margin-top: $header_height;
         padding: 10rem 15rem;
         background-color: $color-white;
         min-height: 100vh;
@@ -31,13 +30,10 @@
 
 // notice alert
 .message {
-    position: absolute;
-    top: $header_height;
-    left: 0;
-    display: block;
     padding: 1rem 2rem;
     width: 100%;
     text-align: center;
+    border-bottom: solid 0.1rem $color-grey-very-light;
 
     &--alert {
         background-color: rgb(245, 200, 200);

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_131342) do
+ActiveRecord::Schema.define(version: 2021_04_23_204454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 2021_04_18_131342) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.boolean "is_public", default: false, null: false
+    t.date "deadline", null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
@@ -68,6 +70,8 @@ ActiveRecord::Schema.define(version: 2021_04_18_131342) do
     t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "is_done", default: false, null: false
+    t.string "short_description", null: false
     t.index ["activity_id"], name: "index_steps_on_activity_id"
   end
 
