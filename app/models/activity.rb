@@ -8,4 +8,6 @@ class Activity < ApplicationRecord
     validates :image, attached: true, content_type: [:png, :jpg, :jpeg]
 
     has_rich_text :description
+
+    scope :published, -> { where(is_public: true) }
 end

@@ -1,15 +1,16 @@
-<h1> Activities </h1>
-<%= render "layouts/search", url: activities_path %>
+<section class='activities'>
+    <%= render "layouts/search", url: activities_path %>
 
-<div class='gallery'>
-    <% @activities.each do |activity| %>
-        <%= render "layouts/card", activity: activity %>
-    <% end %>
-    <div class='card card__add gallery__item'>
-        <%= link_to new_activity_path do %>
-            <i class="fas fa-plus card__plus"></i>
+    <div class='box padding-left-right-big'>
+        <% @activities.each do |activity| %>
+            <%= render "layouts/card", activity: activity %>
         <% end %>
+        <div class='card card__add'>
+            <%= link_to new_activity_path do %>
+                <i class="fas fa-plus card__plus"></i>
+            <% end %>
+        </div>
     </div>
-</div>
 
-<%== pagy_nav(@pagy) %>
+    <%== pagy_nav(@pagy) %>
+</div>

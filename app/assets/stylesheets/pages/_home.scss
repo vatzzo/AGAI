@@ -1,0 +1,63 @@
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  height: calc(100vh - 6rem);
+  margin-top: -10rem;
+
+  @include res(htab) {
+    flex-direction: column;
+  }
+
+  & > * {
+    position: relative;
+    flex: 0 0 50%;
+    text-align: center;
+  }
+
+  &__left {
+    background: radial-gradient($color-pri, $color-pri-dark);
+    color: white;
+
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      img {
+        height: 32rem;
+
+        @include res(desktop) {
+          height: 38rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    .content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    h1 {
+      padding: 0 8rem;
+      font-size: 4rem;
+      margin-bottom: 3rem;
+
+      @include res(desktop) {
+        font-size:  5rem;
+      }
+    }
+
+    p {
+      padding: 0 8rem;
+      font-size: 2rem;
+      font-weight: 300;
+
+      @include res(desktop) {
+        font-size:  2.5rem;
+      }
+    }
+  }
+}

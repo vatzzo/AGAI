@@ -1,10 +1,11 @@
-<h1> Dashboard </h1>
-<%= render "layouts/search", url: dashboard_path %>
+<section class='dashboard'>
+    <%= render "layouts/search", url: dashboard_path %>
 
-<div class='gallery'>
-    <% @activities.each do |activity| %>
-        <%= render "layouts/card", activity: activity %>
-    <% end %>
-</div>
+    <div class='box'>
+        <% @activities.each do |activity| %>
+            <%= render "layouts/card", activity: activity %>
+        <% end %>
+    </div>
 
-<%== pagy_nav(@pagy) %>
+    <%== pagy_nav(@pagy) %>
+</dashboard>

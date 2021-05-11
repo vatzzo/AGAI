@@ -8,9 +8,24 @@
 }
 
 html {
-    // Set 10px as default
     font-size: 62.5%;
     font-weight: 400;
+
+    @include res(desktop) {
+        font-size: 72.5%;
+    }
+
+    @include res(htab) {
+        font-size: 57.5%;
+    }
+
+    @include res(vtab) {
+        font-size: 52.5%;
+    }
+
+    @include res(mobile) {
+        font-size: 47.5%;
+    }
 }
 
 body {

@@ -13,7 +13,7 @@
     z-index: 1000;
 
     &__logo {
-        flex: 0 0 33%;
+        flex: 0 0 30%;
 
         div {
             display: flex;
@@ -33,7 +33,7 @@
     }
 
     &-links {
-        flex: 0 0 33%;
+        flex: 0 0 40%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,7 +54,7 @@
     }
 
     &-info {
-        flex: 0 0 33%;
+        flex: 0 0 30%;
         display: flex;
         justify-content: flex-end;
     }

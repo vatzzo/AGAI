@@ -1,31 +1,28 @@
 .container {
     &__content {
-        padding: 10rem 15rem;
         background-color: $color-white;
-        min-height: 100vh;
+        min-height: calc(100vh - 6rem);
+        padding: 10rem 0 0 0;
     }
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-
-    &__item {
-        margin: $item_gap;
-    }
+// padding
+.padding-left-right-big {
+    padding: 0 10rem;
 }
 
 
 // margins
-
 .margin-bottom-medium {
     margin-bottom: 0 3rem;
 }
 
 .margin-top-medium {
     margin-top: 0 3rem;
+}
+
+.margin-left-small {
+    margin-left: 1rem;
 }
 
 // notice alert

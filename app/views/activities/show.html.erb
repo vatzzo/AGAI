@@ -15,7 +15,7 @@
 
     <% unless @activity.steps.empty? %>
       <h1 class='activity__subtitle'>Steps</h1>
-      <%= render "layouts/accordion", elements: @activity.steps %>
+      <%= render "layouts/accordion", elements: @activity.steps.published %>
     <% end %>
 
     <%= link_to activities_path, class:'back' do %>

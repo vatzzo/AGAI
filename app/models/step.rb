@@ -3,4 +3,6 @@ class Step < ApplicationRecord
     has_rich_text :content
 
     validates :title, :content, :activity, presence: true
+
+    scope :published, -> { where(is_done: true) }
 end
