@@ -28,9 +28,16 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# Ruby 3.0 no longer contains this
+gem 'rexml'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Rspec testing suite
+  gem 'rspec-rails', '~> 5.0.0'
+  # Factories for testing
+  gem 'factory_bot'
 end
 
 group :development do
