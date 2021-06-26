@@ -1,0 +1,33 @@
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Users</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Activities</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td><%= role(user) %></td>
+      <td><%= user.activities.count %></td>
+      <td>
+        <%= link_to admin_panel_path(id: user.id), method: :delete, data: { confirm: 'Are you sure?' }, class:'button button__action button__action--remove' do %>
+            <i class="fas fa-times"></i>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <%== pagy_nav(@pagy) %>
+      </td>
+    </tr>
+  </tfoot>
+</table>

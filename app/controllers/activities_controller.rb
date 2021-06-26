@@ -39,6 +39,13 @@ class ActivitiesController < ApplicationController
         redirect_to activities_path, notice: 'Activity has been deleted.'
     end
 
+    def grade
+        user = activity.ratings.find_by(user: current_user)
+        activity.ratings.create(user: current_user, grade: params[:grade]) unless user
+
+        redirect_to dashboard_path
+    end
+
     private
 
     def activities

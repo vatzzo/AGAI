@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def show
-    @pagy, @activities = pagy(activities, items: 10)
+    @pagy, @activities = pagy(activities, items: 20)
   end
 
   private

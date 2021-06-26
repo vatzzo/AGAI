@@ -6,6 +6,12 @@
         </div>
     </div>
     <ul class='header-links'>
+        <% if is_admin? %>
+            <li class='header-links__link'>
+                <i class="fas fa-users-cog"></i>
+                <%= link_to 'Admin', admin_panel_path %>
+            </li>
+        <% end %>
         <li class='header-links__link'>
             <i class="fas fa-home"></i>
             <%= link_to 'Home', root_path %>

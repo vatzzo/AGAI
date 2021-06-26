@@ -6,5 +6,8 @@ Rails.application.routes.draw do
     resources :steps
   end
 
+  match '/activities/:id/grade', to: 'activities#grade', via: :post
+
   resource :dashboard, controller: 'dashboard'
+  resource :admin_panel, only: [:show, :destroy], controller: 'admin_panel'
 end

@@ -1,4 +1,6 @@
 class Activity < ApplicationRecord
+    acts_as_ratingable
+
     belongs_to :user
     has_many :steps, dependent: :destroy
     has_one_attached :image

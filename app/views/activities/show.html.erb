@@ -22,6 +22,11 @@
         <i class="fas fa-times-circle"></i>
      <% end %>
   </div>
+    <%= form_with url: "#{activity_path(@activity)}/grade", class: 'form', method: :post do |f| %>
+      <%= f.label :grade %>
+      <%= f.select :grade, [1,2,3,4,5] %>
+      <%= f.submit %>
+    <% end %>
 </section>
 
 

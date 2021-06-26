@@ -1,0 +1,34 @@
+.table {
+  min-width: 40rem;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.6rem;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+
+  td, th {
+    padding: 1.2rem 2.2rem;
+    border: none;
+  }
+
+  tr:nth-child(2n) {
+    background-color: $color-grey-very-light;
+  }
+
+  thead {
+    th {
+      color: white;
+      background-color: $color-pri;
+    }
+  }
+
+  tfoot {
+    tr {
+      td {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}

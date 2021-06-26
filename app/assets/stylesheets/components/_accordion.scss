@@ -31,7 +31,7 @@
   button[aria-expanded='true'] {
     + .accordion-content {
       opacity: 1;
-      max-height: 10rem;
+      max-height: 40rem;
       transition: all .25s;
     }
   }

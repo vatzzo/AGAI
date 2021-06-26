@@ -1,18 +1,27 @@
 users = [
   {
     email: 'tomasz@example.com',
-    password: 'admin123'
+    password: 'admin123',
+    is_admin: false
   },
   {
     email: 'kamil@example.com',
-    password: 'admin123'
+    password: 'admin123',
+    is_admin: false
   },
   {
     email: 'kuba@example.com',
-    password: 'admin123'
+    password: 'admin123',
+    is_admin: false
+  },
+  {
+    email: 'admin@example.com',
+    password: 'admin123',
+    is_admin: true
   }
 ]
 
+#  For development pass paths for images and avatars
 images = [
   {
     src: '/Users/mateuszlata/Desktop/Projects/AGAI_01/app/assets/images/ACTIVITIES/cooking-min.jpg',
@@ -40,15 +49,14 @@ avatars = [
 ]
 
 users.each do |user|
-  user = User.create_with(password: user[:password]).find_or_create_by(email: user[:email])
+  user = User.create_with(password: user[:password]).find_or_create_by(email: user[:email], is_admin: user[:is_admin])
 
   avatar = avatars[rand(0..avatars.length-1)]
 
   user.avatar.attach(io: File.open(avatar[:src]), filename: avatar[:file_name])
 end
 
-if Activity.all.count <= 20
-  20.times do
+while Activity.count <= 20
     email= users[rand(0..users.length-1)][:email]
 
     activity = Activity.new(
@@ -70,6 +78,4 @@ if Activity.all.count <= 20
       content: Faker::Lorem.paragraph(sentence_count: 3),
       is_done: rand(0...1) == 1
     )
-  end
 end
-
