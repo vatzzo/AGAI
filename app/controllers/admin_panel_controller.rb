@@ -8,6 +8,11 @@ class AdminPanelController < ApplicationController
     redirect_to admin_panel_path
   end
 
+  def send_email
+    InfoMailer.information_email(content: params[:email_content], subject: params[:email_subject]).deliver_now
+    redirect_to admin_panel_path
+  end
+
   private
 
   def users
