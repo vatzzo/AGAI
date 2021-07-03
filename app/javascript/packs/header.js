@@ -10,6 +10,5 @@ document.addEventListener('turbolinks:load', () => {
   elements.button.addEventListener('click', (e) => {
     elements.links.classList.toggle('header-links--unrolled');
     e.target.classList.toggle('fa-angle-up');
-    console.log('works')
   });
 });
