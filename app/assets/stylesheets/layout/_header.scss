@@ -106,6 +106,10 @@
         i:hover, i:active {
             transform: scale(1.2)
         }
+
+        &:focus, &:active {
+            outline: none;
+        }
     }
 
     i {

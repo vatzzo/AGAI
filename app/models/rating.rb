@@ -1,5 +1,6 @@
 class Rating < ApplicationRecord
   after_create :update_score
+  after_update :update_score
 
   belongs_to :user
   belongs_to :ratingable, polymorphic: true
@@ -7,7 +8,7 @@ class Rating < ApplicationRecord
   private
 
   def update_score
-    new_score = score == 0 ? grade : (score + grade) / subject.ratings.count
+    new_score = score == 0 ? grade : subject.ratings.average(:grade)
     subject.update(score: new_score)
 
   rescue NoMethodError

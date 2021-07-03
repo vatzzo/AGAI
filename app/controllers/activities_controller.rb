@@ -40,21 +40,36 @@ class ActivitiesController < ApplicationController
     end
 
     def grade
-        user = activity.ratings.find_by(user: current_user)
-        activity.ratings.create(user: current_user, grade: params[:grade]) unless user
+        unless activity.user == current_user
+            user_rating = activity.ratings.find_by(user: current_user)
 
-        redirect_to dashboard_path
+            if user_rating
+                user_rating.update(grade: params[:grade])
+            else
+                activity.ratings.create(user: current_user, grade: params[:grade])
+            end
+
+            redirect_to dashboard_path, notice: "You rated the activity #{params[:grade]}"
+        else
+            redirect_to dashboard_path, alert: 'You cannot give a grade to yourself.'
+        end
     end
 
     private
 
     def activities
-        activities = Activity.all.where(user: current_user).order(:deadline)
         if params[:query].nil?
-            activities
+            Activity.where(user: current_user).order("#{filter} desc")
         else
-            activities.where("lower(title) LIKE ?", "%" + params[:query].downcase + "%") unless params[:query].nil?
+            Activity.where(user: current_user).where("lower(title) LIKE ?", "%" + params[:query].downcase + "%")
         end
+      end
+
+    def filter
+        params[:filter_with].to_sym
+
+    rescue NoMethodError
+        'created_at'
     end
 
     def activity
