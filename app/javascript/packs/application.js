@@ -15,17 +15,3 @@ ActiveStorage.start()
 require("trix")
 require("@rails/actiontext")
 import "@fortawesome/fontawesome-free/css/all";
-
-// Navigation
-  // TODO Move it to separate file
-window.onload = function() {
-  const elements = {
-    links: document.querySelector('.header-links'),
-    button: document.getElementById('btn')
-  }
-
-  elements.button.addEventListener('click', (e) => {
-    elements.links.classList.toggle('header-links--unrolled');
-    e.target.classList.toggle('fa-angle-up');
-  });
-}
