@@ -7,9 +7,16 @@ class DashboardController < ApplicationController
 
   def activities
     if params[:query].nil?
-        Activity.published.order(:created_at)
+        Activity.published.order("#{filter} desc")
     else
         Activity.published.where("lower(title) LIKE ?", "%" + params[:query].downcase + "%")
     end
+  end
+
+  def filter
+    params[:filter_with].to_sym
+
+  rescue NoMethodError
+    'created_at'
   end
 end

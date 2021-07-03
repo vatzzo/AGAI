@@ -1,5 +1,6 @@
 <section class='dashboard'>
     <%= render "layouts/search", url: dashboard_path %>
+    <%= render "layouts/filter" %>
 
     <div class='box'>
         <% @activities.each do |activity| %>

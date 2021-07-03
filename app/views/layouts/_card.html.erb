@@ -3,7 +3,7 @@
     <p class='card__title'><%= activity.title %></p>
     <p class='card__user'><%= image_tag user_avatar(activity.user, 100), class: 'avatar avatar--small' %><span><%= activity.user %></span></p>
     <div class='card__rating'>
-        <% rounded_grade(activity).times do %>
+        <% activity.score.round.times do %>
             <i class="fas fa-star"></i>
         <% end %>
     </div>

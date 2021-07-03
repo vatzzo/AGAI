@@ -1,0 +1,5 @@
+<div class='filter'>
+  <%= link_to "created_at", filter_with: :created_at %>
+  <%= link_to "score", filter_with: :score %>
+  <%= link_to "id", filter_with: :id if is_admin? %>
+</div>

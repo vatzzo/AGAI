@@ -1,7 +1,8 @@
 <section class='activities'>
     <%= render "layouts/search", url: activities_path %>
+    <%= render "layouts/filter" %>
 
-    <div class='box padding-left-right-big'>
+    <div class='box'>
         <% @activities.each do |activity| %>
             <%= render "layouts/card", activity: activity %>
         <% end %>
