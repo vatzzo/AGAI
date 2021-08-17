@@ -4,8 +4,9 @@
     <h1 class='activity__title'><%= @activity.title %><h1>
 
     <div class='activity__user'>
-      <%= image_tag user_avatar(current_user, 100), class: 'avatar avatar--small' %>
-      <p><%= current_user.email %></p>
+      <% user = @activity.user %>
+      <%= image_tag user_avatar(user, 100), class: 'avatar avatar--small' %>
+      <%= link_to user.email, profiles_path(id: user.id) %>
     </div>
 
     <% if @activity.image.attached? %>

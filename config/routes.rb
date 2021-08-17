@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   match '/activities/:id/grade', to: 'activities#grade', via: :post
 
+  resource :profiles, only: :show
   resource :dashboard, controller: 'dashboard'
   resource :admin_panel, only: [:show, :destroy], controller: 'admin_panel'
 

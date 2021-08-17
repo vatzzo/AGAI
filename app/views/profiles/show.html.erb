@@ -1,0 +1,10 @@
+<%= render "layouts/profile", profile: @profile %>
+
+<div class="gallery">
+  <h1> Recent Activities </h1>
+  <div class="gallery__items">
+    <% @profile.activities.last(3).each do |activity| %>
+      <%= render "layouts/card", activity: activity %>
+    <% end %>
+  </div>
+</div>

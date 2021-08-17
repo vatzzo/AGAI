@@ -16,6 +16,36 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
+  <div class="form__item">
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
+  </div>
+
+  <div class="form__item">
+    <%= f.label :profession %>
+    <%= f.text_field :profession %>
+  </div>
+
+  <div class="form__item">
+    <%= f.label :education %>
+    <%= f.text_field :education %>
+  </div>
+
+  <div class="form__item">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="form__item">
+    <%= f.label :phone_number %>
+    <%= f.number_field :phone_number %>
+  </div>
+
+   <div class="form__item">
+    <%= f.label :biography %>
+    <%= f.text_field :biography %>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

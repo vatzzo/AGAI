@@ -1,0 +1,68 @@
+.profile {
+  margin: 0 auto;
+  width: 90rem;
+  min-height: 40rem;
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 1rem rgba(black, 0.15);
+  overflow: hidden;
+
+  &__info {
+    flex: 0 0 50%;
+    height: 100%;
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    padding-right: 0.5rem;
+    font-size: 1.8rem;
+    background-image: linear-gradient(to right bottom, $color-ter-light, $color-ter-dark);
+    color: white;
+
+    img {
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+
+    .item {
+      display: flex;
+      margin: 0.5rem;
+  
+      img {
+        margin: 0 auto;
+      }
+  
+      &__label {
+        font-weight: bold;
+        margin-right: 0.5rem;
+        background-color: $color-grey-light;
+        color: $color-grey-dark;
+        padding: 0.3rem 0.6rem;
+        border-radius: 3px;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__biography {
+    flex: 0 0 50%;
+    height: 100%;
+    min-height: 40rem;
+    padding: 3rem;
+
+    h1 {
+      text-align: center;
+      color: $color-grey-dark;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      display: inline-block;
+      text-align: justify;
+    }
+  }
+}

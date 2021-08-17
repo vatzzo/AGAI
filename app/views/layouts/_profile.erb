@@ -1,0 +1,20 @@
+<div class="profile">
+  <div class="profile__info">
+    <%= image_tag user_avatar(profile, 100), class: "avatar" %>
+    <% {
+        "email" => profile.email,
+        "full name" => profile.full_name,
+        "profession" => profile.profession,
+        "education" => profile.education,
+        "location" => profile.location,
+        "phone number" => profile.phone_number,
+      }.each do |k, v| %>
+      <%= render "layouts/profile_item", label: k, value: v %>
+    <% end %>
+  </div>
+
+  <div class="profile__biography">
+    <h1>About me</h1>
+    <p><%= profile.biography %></p>
+  </div>
+</div>
