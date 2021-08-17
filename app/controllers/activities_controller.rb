@@ -67,7 +67,6 @@ class ActivitiesController < ApplicationController
 
     def filter
         params[:filter_with].to_sym
-
     rescue NoMethodError
         'created_at'
     end
@@ -76,7 +75,6 @@ class ActivitiesController < ApplicationController
         @activity = Activity.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def activity_params
         params.require(:activity).permit(:title, :description, :image, :deadline, :is_public)
     end

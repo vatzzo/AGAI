@@ -1,0 +1,54 @@
+.comments {
+  width: 90rem;
+  margin: 0 auto;
+
+  h1 {
+    color: $color-grey-dark;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+    margin: 0.3rem;
+    background-color: rgba(white, 0.7);
+    position: relative;
+
+    .content {
+
+    }
+
+    .user {
+      font-size: 1.4rem;
+      color: $color-grey-dark;
+    }
+
+    .delete {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+    }
+  }
+
+  form {
+    textarea {
+      width: 100%;
+      padding: 4rem 2rem;
+      box-shadow: 0.3rem 0.3rem 1rem rgba(black, 0.05);
+      outline: none;
+      border: none;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+
+   input[type=submit] {
+     margin-top: 0.5rem;
+     padding: .5rem 2rem;
+     outline: none;
+     border: none;
+     background-image: linear-gradient(to right bottom, $color-ter-light, $color-ter-dark);
+     color: white;
+     border-radius: 50rem;
+   }
+  }
+}

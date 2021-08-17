@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resource :profiles, only: :show
   resource :dashboard, controller: 'dashboard'
   resource :admin_panel, only: [:show, :destroy], controller: 'admin_panel'
+  resource :comments, only: [:destroy, :create]
 
   match '/admin_panel/send_email', to: 'admin_panel#send_email', via: :post
 end

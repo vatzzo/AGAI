@@ -1,7 +1,9 @@
 <div class='card margin-bottom-medium'>
     <%= image_tag activity.image, class:'card__image' %>
     <p class='card__title'><%= activity.title %></p>
-    <p class='card__user'><%= image_tag user_avatar(activity.user, 100), class: 'avatar avatar--small' %><span><%= activity.user %></span></p>
+    <p class='card__user'><%= image_tag user_avatar(activity.user, 100), class: 'avatar avatar--small' %>
+      <span><%= link_to activity.user.email, profiles_path(id: activity.user.id) %></span>
+    </p>
     <div class='card__rating'>
         <% activity.score.round.times do %>
             <i class="fas fa-star"></i>

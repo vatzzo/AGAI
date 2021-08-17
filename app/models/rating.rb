@@ -10,7 +10,6 @@ class Rating < ApplicationRecord
   def update_score
     new_score = score == 0 ? grade : subject.ratings.average(:grade)
     subject.update(score: new_score)
-
   rescue NoMethodError
     nil
   end

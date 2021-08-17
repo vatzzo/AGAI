@@ -20,6 +20,28 @@
       <%= render "layouts/accordion", elements: @activity.steps.published %>
     <% end %>
 
+    <div class ='comments'>
+      <h1 class='activity__subtitle'>Comments</h1>
+      <% @activity.comments.each do |comment| %>
+        <div class='comments__item'>
+          <p class='content'><%= comment.content %></p>
+          <p class='user'><%= comment.user %></p>
+          <% if current_user == comment.user %>
+            <%= link_to comments_path(id: comment.id), method: :delete, class: 'delete' do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+
+      <%= form_with url: comments_path, method: :post do |f| %>
+        <%= f.text_area :content %>
+        <%= f.hidden_field :commentable_id, value: @activity.id %>
+        <%= f.hidden_field :commentable_type, value: @activity.class %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+
     <%= link_to activities_path, class:'back' do %>
         <i class="fas fa-times-circle"></i>
      <% end %>

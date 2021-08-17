@@ -1,4 +1,6 @@
 .accordion {
+  margin-bottom: 2rem;
+  
   .accordion-item {
     border-bottom: 0.15rem solid $color-grey-light;
     button[aria-expanded='true'] {
