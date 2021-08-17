@@ -30,3 +30,13 @@
     <%= f.submit %>
   <% end %>
 </div>
+
+<% if @profile != current_user %>
+  <%= form_with url: ratings_path, method: :post, class: 'grade' do |f| %>
+    <%= f.label :grade %>
+    <%= f.select :grade, [1,2,3,4,5] %>
+    <%= f.hidden_field :ratingable_id, value: @profile.id %>
+    <%= f.hidden_field :ratingable_type, value: @profile.class %>
+    <%= f.submit %>
+  <% end %>
+<% end %>

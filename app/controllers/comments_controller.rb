@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(content: params[:content], user: current_user,
-                           commentable_id: subject.id, commentable_type: subject.class)
+                           commentable_id: params[:commentable_id], 
+                           commentable_type: params[:commentable_type])
     @comment.save
 
     if @comment.errors.any?
@@ -21,10 +22,5 @@ class CommentsController < ApplicationController
 
   def comment
     @comment ||= Comment.find(params[:id])
-  end
-
-  def subject
-    subject = params[:commentable_type].constantize
-    @subject = subject.find(params[:commentable_id])
   end
 end

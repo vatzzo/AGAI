@@ -1,25 +1,28 @@
 <div class='card margin-bottom-medium'>
-    <%= image_tag activity.image, class:'card__image' %>
-    <p class='card__title'><%= activity.title %></p>
-    <p class='card__user'><%= image_tag user_avatar(activity.user, 100), class: 'avatar avatar--small' %>
-      <span><%= link_to activity.user.email, profiles_path(id: activity.user.id) %></span>
-    </p>
-    <div class='card__rating'>
-        <% activity.score.round.times do %>
-            <i class="fas fa-star"></i>
-        <% end %>
-    </div>
-    <div class='card__actions'>
-        <% if current_user == activity.user %>
-            <%= link_to activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'button button__action button__action--remove' do %>
-                <i class="fas fa-trash"></i>
-            <% end %>
-            <%= link_to edit_activity_path(activity), class:'button button__action button__action--show' do %>
-                <i class="fas fa-edit"></i>
-            <% end %>
-        <% end %>
-        <%= link_to activity_path(activity), class:'button button__action button__action--edit' do %>
-            <i class="fas fa-info-circle"></i>
-        <% end %>
-    </div>
+  <%= image_tag activity.image, class:'card__image' %>
+  <p class='card__title'><%= activity.title %></p>
+  <p class='card__user'><%= image_tag user_avatar(activity.user, 100), class: 'avatar avatar--small' %>
+    <span><%= link_to activity.user.email, profiles_path(id: activity.user.id) %></span>
+  </p>
+  <div class='card__rating'>
+    <% score = activity.ratings.average(:grade) %>
+    <% if score %>
+      <% score.round(half: :up).to_i.times do %>
+          <i class="fas fa-star"></i>
+      <% end %>
+    <% end %>
+  </div>
+  <div class='card__actions'>
+    <% if current_user == activity.user %>
+      <%= link_to activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'button button__action button__action--remove' do %>
+          <i class="fas fa-trash"></i>
+      <% end %>
+      <%= link_to edit_activity_path(activity), class:'button button__action button__action--show' do %>
+          <i class="fas fa-edit"></i>
+      <% end %>
+    <% end %>
+    <%= link_to activity_path(activity), class:'button button__action button__action--edit' do %>
+      <i class="fas fa-info-circle"></i>
+    <% end %>
+  </div>
 </div>

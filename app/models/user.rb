@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   acts_as_commentable
+  acts_as_ratingable
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

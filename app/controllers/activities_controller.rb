@@ -39,22 +39,6 @@ class ActivitiesController < ApplicationController
         redirect_to activities_path, notice: 'Activity has been deleted.'
     end
 
-    def grade
-        unless activity.user == current_user
-            user_rating = activity.ratings.find_by(user: current_user)
-
-            if user_rating
-                user_rating.update(grade: params[:grade])
-            else
-                activity.ratings.create(user: current_user, grade: params[:grade])
-            end
-
-            redirect_to dashboard_path, notice: "You rated the activity #{params[:grade]}"
-        else
-            redirect_to dashboard_path, alert: 'You cannot give a grade to yourself.'
-        end
-    end
-
     private
 
     def activities

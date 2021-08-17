@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_17_141040) do
+ActiveRecord::Schema.define(version: 2021_08_17_210758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 2021_08_17_141040) do
     t.bigint "user_id"
     t.boolean "is_public", default: false, null: false
     t.date "deadline", null: false
-    t.float "score", default: 0.0, null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 

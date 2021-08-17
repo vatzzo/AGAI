@@ -46,11 +46,12 @@
         <i class="fas fa-times-circle"></i>
      <% end %>
   </div>
-    <!-- TODO Change this ugly path :) -->
     <% if @activity.user != current_user %>
-      <%= form_with url: "#{activity_path(@activity)}/grade", class: 'grade', method: :post do |f| %>
+      <%= form_with url: ratings_path, class: 'grade', method: :post do |f| %>
         <%= f.label :grade %>
         <%= f.select :grade, [1,2,3,4,5] %>
+        <%= f.hidden_field :ratingable_id, value: @activity.id %>
+        <%= f.hidden_field :ratingable_type, value: @activity.class %>
         <%= f.submit %>
       <% end %>
     <% end %>

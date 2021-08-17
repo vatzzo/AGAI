@@ -1,4 +1,6 @@
 <div class="profile">
+  <% ratings = Rating.where(ratingable_id: @profile.id).average(:grade) %>
+  
   <div class="profile__info">
     <%= image_tag user_avatar(profile, 100), class: "avatar" %>
     <% {
@@ -10,6 +12,13 @@
         "phone number" => profile.phone_number,
       }.each do |k, v| %>
       <%= render "layouts/profile_item", label: k, value: v %>
+    <% end %>
+    <% if ratings %>
+      <div class="stars">
+        <% ratings.round(half: :up).to_i.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+      </div>
     <% end %>
   </div>
 
