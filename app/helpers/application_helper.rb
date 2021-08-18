@@ -18,4 +18,10 @@ module ApplicationHelper
   def role(user)
     user.is_admin ? 'admin' : 'user'
   end
+
+  def trim_title(title)
+    return title if title.length <= 16
+    
+    "#{title[0...16]}..."
+  end
 end
