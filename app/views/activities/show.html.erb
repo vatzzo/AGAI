@@ -1,7 +1,7 @@
 <%= javascript_pack_tag 'accordion' unless @activity.steps.empty?%>
-<section class='activities activities__show'>
+<section class='activities activities--padding activities__show'>
   <div class='activity'>
-    <h1 class='activity__title'><%= @activity.title %><h1>
+    <h1 class='activity__title'><%= @activity.title %></h1>
 
     <div class='activity__user'>
       <% user = @activity.user %>
@@ -15,7 +15,7 @@
 
     <div class='activity__description'><%= @activity.description %></div>
 
-    <% unless @activity.steps.empty? %>
+    <% if @activity.steps.published.present? %>
       <h1 class='activity__subtitle'>Steps</h1>
       <%= render "layouts/accordion", elements: @activity.steps.published %>
     <% end %>

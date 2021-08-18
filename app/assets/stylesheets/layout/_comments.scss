@@ -2,6 +2,14 @@
   width: 90rem;
   margin: 0 auto;
 
+  @include res(vtab) {
+    width: 60rem;
+  }
+
+  @include res(mobile) {
+    width: 40rem;
+  }
+
   h1 {
     color: $color-grey-dark;
     margin-bottom: 1rem;
@@ -13,10 +21,6 @@
     margin: 0.3rem;
     background-color: rgba(white, 0.7);
     position: relative;
-
-    .content {
-
-    }
 
     .user {
       font-size: 1.4rem;

@@ -9,9 +9,29 @@
     box-shadow: 0.3rem 0.3rem 1rem rgba($color-black, 0.2);
     width: 60rem;
     margin: 0 auto;
+    
+    @include res(vtab) {
+      width: 55rem;
+    }
+
+    @include res(mobile) {
+      width: 40rem;
+    }
 
     &--big {
         width: 120rem;
+
+        @include res(htab) {
+          width: 90rem;
+        }
+
+        @include res(vtab) {
+          width: 70rem;
+        }
+
+        @include res(mobile) {
+          width: 40rem;
+        }
     }
 
     &__header {
@@ -76,6 +96,10 @@
         flex-direction: row;
         justify-content: space-evenly;
         margin-bottom: 1.6rem;
+
+        @include res(vtab) {
+          flex-direction: column;
+        }
 
         &--between {
             justify-content: space-between;

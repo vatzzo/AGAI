@@ -9,6 +9,15 @@
   box-shadow: 0.3rem 0.3rem 1rem rgba(black, 0.15);
   overflow: hidden;
 
+  @include res(vtab) {
+    width: 50rem;
+    flex-direction: column;
+  }
+
+  @include res(mobile) {
+    width: 40rem;
+  }
+
   &__info {
     flex: 0 0 50%;
     height: 100%;
@@ -21,6 +30,10 @@
     font-size: 1.8rem;
     background-image: linear-gradient(to right bottom, $color-ter-light, $color-ter-dark);
     color: white;
+
+    @include res(vtab) {
+      width: 100%;
+    }
 
     img {
       align-self: center;

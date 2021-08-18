@@ -12,6 +12,10 @@
     align-items: center;
     z-index: 1000;
 
+    @include res(mobile) {
+      padding: 0;
+    }
+
     &__logo {
         flex: 0 0 25%;
 

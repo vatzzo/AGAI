@@ -2,7 +2,7 @@
     &__content {
         background-color: $color-white;
         min-height: calc(100vh - 6rem);
-        padding: 10rem 0 0 0;
+        padding: 10rem 0;
     }
 }
 
@@ -60,10 +60,14 @@
 // BACK
 .back {
     position: absolute;
-    top: 2rem;
-    right: 4rem;
+    top: 0;
+    right: 2rem;
     font-size: 3.6rem;
     color: $color-ter-dark;
+
+    &--topone {
+      top: 1rem;
+    }
 }
 
 // GALLERY
@@ -71,6 +75,14 @@
 .gallery {
   margin: 5rem auto;
   width: 90rem;
+
+  @include res(vtab) {
+    width: 70rem;
+  }
+
+  @include res(mobile) {
+    width: 40rem;
+  }
 
   h1 { 
     color: $color-grey-dark;
@@ -83,9 +95,23 @@
     justify-content: space-between;
     align-items: center;
 
+    @include res(vtab) {
+      flex-direction: column;
+    }
+
     .card {
       margin: -2rem;
       transform: scale(0.85);
+
+      @include res(vtab) {
+        margin: 5rem 0;
+        transform: scale(1.2);
+      }
+
+      @include res(mobile) {
+        margin: 1rem 0;
+        transform: scale(0.9);
+      }
     }
   }
 }

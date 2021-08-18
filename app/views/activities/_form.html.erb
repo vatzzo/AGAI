@@ -23,7 +23,7 @@
 
     <div class='form__item'>
         <% if @activity.image.attached? %>
-            <%= image_tag @activity.image, width: '400px' %>
+            <%= image_tag @activity.image, width: '80%' %>
         <% end %>
         <label>Image</label>
         <%= form.file_field :image %>
@@ -36,7 +36,7 @@
         </div>
     <% end %>
 
-     <%= link_to activities_path, class:'back' do %>
+     <%= link_to activities_path, class:'back back--topone' do %>
         <i class="fas fa-times-circle""></i>
      <% end %>
 
