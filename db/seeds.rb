@@ -21,29 +21,28 @@ users = [
   }
 ]
 
-#  For development pass paths for images and avatars
 images = [
   {
-    src: '/Users/mateuszlata/Desktop/Projects/AGAI_01/app/assets/images/ACTIVITIES/cooking-min.jpg',
+    src: Rails.root.join('app', 'assets', 'images', 'ACTIVITIES','cooking-min.jpg'),
     file_name: 'cooking-min.jpg'
   },
   {
-    src: '/Users/mateuszlata/Desktop/Projects/AGAI_01/app/assets/images/ACTIVITIES/guitar-min.jpg',
+    src: Rails.root.join('app', 'assets', 'images', 'ACTIVITIES','guitar-min.jpg'),
     file_name: 'guitar-min.jpg'
   },
   {
-    src: '/Users/mateuszlata/Desktop/Projects/AGAI_01/app/assets/images/ACTIVITIES/skating-min.jpg',
+    src: Rails.root.join('app', 'assets', 'images', 'ACTIVITIES','skating-min.jpg'),
     file_name: 'skating-min.jpg'
   }
 ]
 
 avatars = [
   {
-    src: '/Users/mateuszlata/Desktop/Projects/AGAI_01/app/assets/images/USERS/user_1-min.jpg',
+    src: Rails.root.join('app', 'assets', 'images', 'USERS', 'user_1-min.jpg'),
     file_name: 'user_1-min.jpg'
   },
   {
-    src: '/Users/mateuszlata/Desktop/Projects/AGAI_01/app/assets/images/USERS/user_2-min.jpg',
+    src: Rails.root.join('app', 'assets', 'images', 'USERS', 'user_2-min.jpg'),
     file_name: 'user_2-min.jpg'
   }
 ]

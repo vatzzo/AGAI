@@ -5,12 +5,13 @@ class Activity < ApplicationRecord
     belongs_to :user
     has_many :steps, dependent: :destroy
     has_one_attached :image
+    
+    has_rich_text :description
 
     validates :title, presence: true, length: { minimum: 3 }
-    validates :description, presence: true, length: { minimum: 10 }
+    validates :is_public, inclusion: { in: [true, false] }
+    validates :deadline, presence: true
     validates :image, attached: true, content_type: [:png, :jpg, :jpeg]
-
-    has_rich_text :description
 
     scope :published, -> { where(is_public: true) }
 end
