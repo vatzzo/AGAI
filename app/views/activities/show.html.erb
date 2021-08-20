@@ -1,4 +1,4 @@
-<%= javascript_pack_tag 'accordion' unless @activity.steps.empty?%>
+<%= javascript_pack_tag 'accordion' unless @activity.steps.published.empty?%>
 <section class='activities activities--padding activities__show'>
   <div class='activity'>
     <h1 class='activity__title'><%= @activity.title %></h1>
@@ -42,7 +42,7 @@
       <% end %>
     </div>
 
-    <%= link_to activities_path, class:'back' do %>
+    <%= link_to dashboard_path, class:'back' do %>
         <i class="fas fa-times-circle"></i>
      <% end %>
   </div>

@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   validates :avatar, content_type: [:png, :jpg, :jpeg]
   validates :phone_number, numericality: { only_integer: true },
-            length: { is: 9 }
+            length: { is: 9 }, unless: -> { phone_number.blank? }
 
   scope :admin, -> { where(is_admin: true) }
 

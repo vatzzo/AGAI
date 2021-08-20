@@ -72,8 +72,8 @@
 
   <div class="from__item">
     <label style="margin-top: 1rem;">Cancel my account</label>
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, 
-                  method: :delete, class:'submit', style: "background-color: #5643fa" %>
+    <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, 
+                  method: :delete, class:"cancel" %>
   </div>
 <% end %>
 
