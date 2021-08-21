@@ -22,6 +22,6 @@ module ApplicationHelper
   def trim_title(title)
     return title if title.length <= 16
     
-    "#{title[0...16]}..."
+    "#{title[0..15]}..."
   end
 end

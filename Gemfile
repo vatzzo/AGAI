@@ -59,6 +59,8 @@ group :test do
   # Factories for testing
   gem "factory_bot_rails"
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'rails-controller-testing'
+  gem "database_cleaner-active_record", "~> 2.0.1"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

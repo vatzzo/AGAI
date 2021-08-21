@@ -22,21 +22,21 @@ class ActivitiesController < ApplicationController
 
         if @activity.errors.any?
             flash[:alert] = @activity.errors.full_messages
-            render :new
+            render :new, status: :bad_request
         else
             flash[:notice]='New activity has been added.'
-            redirect_to activities_path
+            redirect_to activities_path, status: :created
         end
     end
 
     def update
         activity.update(activity_params)
-        redirect_to activities_path, notice: 'Activity has been updated.'
+        redirect_to activities_path, notice: 'Activity has been updated.', status: :ok
     end
 
     def destroy
         activity.destroy
-        redirect_to activities_path, notice: 'Activity has been deleted.'
+        redirect_to activities_path, notice: 'Activity has been deleted.', status: :ok
     end
 
     private
@@ -50,16 +50,16 @@ class ActivitiesController < ApplicationController
       end
 
     def filter
-        params[:filter_with].to_sym
+      params[:filter_with].to_sym
     rescue NoMethodError
         'created_at'
     end
 
     def activity
-        @activity = Activity.find(params[:id])
+      @activity = Activity.find(params[:id])
     end
 
     def activity_params
-        params.require(:activity).permit(:title, :description, :image, :deadline, :is_public)
+      params.require(:activity).permit(:title, :description, :image, :deadline, :is_public)
     end
 end
