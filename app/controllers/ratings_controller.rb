@@ -2,7 +2,7 @@ class RatingsController < ApplicationController
   def create
     if rating
       rating.update(grade: params[:grade].to_f)
-      redirect_to request.referrer, notice: "Rating has been updated."
+      redirect_to request.referrer, notice: "Rating has been updated.", status: :ok
     else 
       @rating = Rating.new(
         grade: params[:grade],
@@ -15,9 +15,9 @@ class RatingsController < ApplicationController
 
       if @rating.errors.any?
         flash[:alert] = @rating.errors.full_messages
-        redirect_to request.referrer
+        redirect_to request.referrer, status: :bad_request
       else
-        redirect_to request.referrer, notice: "Rating has been added."
+        redirect_to request.referrer, notice: "Rating has been added.", status: :created
       end
     end
   end

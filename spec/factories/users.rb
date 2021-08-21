@@ -9,9 +9,21 @@ FactoryBot.define do
     biography { "Some Biography" }
     education { "Some Education" }
     profession { "Some Profession" }
-    
-    trait :admin do
+
+    factory :second_user do
+      email { "second_user@example.com" }
+      password { "admin123" }
+      is_admin { false }
+    end
+
+    factory :admin do
+      email { "admin_user@example.com" }
+      password { "admin123" }
       is_admin { true }
+
+      after :create do |u|
+        create :comment, user: u
+      end
     end
   end
 end

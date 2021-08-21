@@ -5,7 +5,8 @@ class AdminPanelController < ApplicationController
 
   def destroy
     user.destroy
-    redirect_to admin_panel_path
+    flash[:notice]='User has been deleted.'
+    redirect_to admin_panel_path, status: :ok
   end
 
   def send_email

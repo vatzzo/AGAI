@@ -9,13 +9,13 @@ class CommentsController < ApplicationController
       flash[:alert] = @comment.errors.full_messages
       redirect_to request.referrer
     else
-      redirect_to request.referrer, notice: "Comment has been added."
+      redirect_to request.referrer, notice: "Comment has been added.", status: :created
     end
   end
 
   def destroy
     comment.destroy
-    redirect_to request.referrer, notice: "Comment has been deleted."
+    redirect_to request.referrer, notice: "Comment has been deleted.", status: :ok
   end
 
   private
