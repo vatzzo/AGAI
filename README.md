@@ -9,17 +9,17 @@ Follow these steps to get our service running on you computer.
 2. Building the app with Docker
 In terminal, type the following commands:
 
-  `docker compose build app` &rarr; builds an image
+`docker compose build app` &rarr; builds an image
 
-  `docker compose run app bash`&rarr; opens bash terminal
+`docker compose run app bash`&rarr; opens bash terminal
 
-  `rails db:create db:migrate db:seed`&rarr; creates database, runs the migrations, and makes seeds which are required.
+`rails db:create db:migrate db:seed`&rarr; creates database, runs the migrations, and makes seeds which are required.
 
-  **Then exit the bash console and run:**
+**Then exit the bash console and run:**
 
-  `docker compose up` &rarr; composes the containers and runs the application
+`docker compose up` &rarr; composes the containers and runs the application
 
 3. Running tests
 Attach new shell and type the following command in the terminal:
 
-  `bundle exec rspec -fd` &rarr; runs tests
+`bundle exec rspec -fd` &rarr; runs tests
