@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    container_name: app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - RAILS_ENV
+    volumes:
+      - .:/web
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - database:/var/lib/postgresql/data
+volumes:
+  database:

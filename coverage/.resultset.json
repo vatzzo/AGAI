@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mateuszlata/Projects/AGAI/spec/support/database_cleaner.rb": {
+      "/web/spec/support/database_cleaner.rb": {
         "lines": [
           1,
           1,
@@ -22,7 +22,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/environment.rb": {
+      "/web/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -31,7 +31,7 @@
           1
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/application.rb": {
+      "/web/config/application.rb": {
         "lines": [
           1,
           null,
@@ -59,7 +59,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/boot.rb": {
+      "/web/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -67,7 +67,7 @@
           1
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/environments/test.rb": {
+      "/web/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -131,7 +131,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/application_controller_renderer.rb": {
+      "/web/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -143,7 +143,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/assets.rb": {
+      "/web/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -161,7 +161,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/backtrace_silencers.rb": {
+      "/web/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -173,7 +173,7 @@
           1
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/content_security_policy.rb": {
+      "/web/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -207,7 +207,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/cookies_serializer.rb": {
+      "/web/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -216,7 +216,7 @@
           1
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/devise.rb": {
+      "/web/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -531,7 +531,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/filter_parameter_logging.rb": {
+      "/web/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -541,7 +541,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/inflections.rb": {
+      "/web/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -561,7 +561,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/mime_types.rb": {
+      "/web/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -569,7 +569,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/permissions_policy.rb": {
+      "/web/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -584,7 +584,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/initializers/wrap_parameters.rb": {
+      "/web/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -602,7 +602,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/factories/activities.rb": {
+      "/web/spec/factories/activities.rb": {
         "lines": [
           1,
           1,
@@ -616,7 +616,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/factories/comments.rb": {
+      "/web/spec/factories/comments.rb": {
         "lines": [
           1,
           1,
@@ -627,7 +627,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/factories/ratings.rb": {
+      "/web/spec/factories/ratings.rb": {
         "lines": [
           1,
           1,
@@ -638,7 +638,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/factories/steps.rb": {
+      "/web/spec/factories/steps.rb": {
         "lines": [
           1,
           1,
@@ -651,7 +651,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/factories/users.rb": {
+      "/web/spec/factories/users.rb": {
         "lines": [
           1,
           1,
@@ -684,7 +684,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/config/routes.rb": {
+      "/web/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -706,7 +706,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/user.rb": {
+      "/web/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -733,7 +733,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/application_record.rb": {
+      "/web/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -748,7 +748,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/concerns/commentable.rb": {
+      "/web/app/models/concerns/commentable.rb": {
         "lines": [
           1,
           1,
@@ -759,7 +759,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/concerns/ratingable.rb": {
+      "/web/app/models/concerns/ratingable.rb": {
         "lines": [
           1,
           1,
@@ -770,7 +770,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/helpers/application_helper.rb": {
+      "/web/app/helpers/application_helper.rb": {
         "lines": [
           1,
           1,
@@ -801,7 +801,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/models/activity_spec.rb": {
+      "/web/spec/models/activity_spec.rb": {
         "lines": [
           1,
           null,
@@ -835,7 +835,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/activity.rb": {
+      "/web/app/models/activity.rb": {
         "lines": [
           1,
           1,
@@ -856,7 +856,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/models/comment_spec.rb": {
+      "/web/spec/models/comment_spec.rb": {
         "lines": [
           1,
           null,
@@ -875,7 +875,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/comment.rb": {
+      "/web/app/models/comment.rb": {
         "lines": [
           1,
           1,
@@ -885,7 +885,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/models/rating_spec.rb": {
+      "/web/spec/models/rating_spec.rb": {
         "lines": [
           1,
           null,
@@ -908,7 +908,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/rating.rb": {
+      "/web/app/models/rating.rb": {
         "lines": [
           1,
           1,
@@ -918,7 +918,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/models/step_spec.rb": {
+      "/web/spec/models/step_spec.rb": {
         "lines": [
           1,
           null,
@@ -943,7 +943,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/models/step.rb": {
+      "/web/app/models/step.rb": {
         "lines": [
           1,
           1,
@@ -957,7 +957,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/models/user_spec.rb": {
+      "/web/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -985,7 +985,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/requests/activities_spec.rb": {
+      "/web/spec/requests/activities_spec.rb": {
         "lines": [
           1,
           null,
@@ -1108,7 +1108,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/requests/admin_panel_spec.rb": {
+      "/web/spec/requests/admin_panel_spec.rb": {
         "lines": [
           1,
           null,
@@ -1137,7 +1137,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/requests/comments_spec.rb": {
+      "/web/spec/requests/comments_spec.rb": {
         "lines": [
           1,
           null,
@@ -1177,7 +1177,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/requests/profiles_spec.rb": {
+      "/web/spec/requests/profiles_spec.rb": {
         "lines": [
           1,
           null,
@@ -1196,7 +1196,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/requests/ratings_spec.rb": {
+      "/web/spec/requests/ratings_spec.rb": {
         "lines": [
           1,
           null,
@@ -1225,7 +1225,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/spec/requests/steps_spec.rb": {
+      "/web/spec/requests/steps_spec.rb": {
         "lines": [
           1,
           null,
@@ -1273,7 +1273,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/activities_controller.rb": {
+      "/web/app/controllers/activities_controller.rb": {
         "lines": [
           1,
           1,
@@ -1342,7 +1342,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/application_controller.rb": {
+      "/web/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -1370,7 +1370,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/admin_panel_controller.rb": {
+      "/web/app/controllers/admin_panel_controller.rb": {
         "lines": [
           1,
           1,
@@ -1400,7 +1400,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/comments_controller.rb": {
+      "/web/app/controllers/comments_controller.rb": {
         "lines": [
           1,
           1,
@@ -1430,7 +1430,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/profiles_controller.rb": {
+      "/web/app/controllers/profiles_controller.rb": {
         "lines": [
           1,
           1,
@@ -1445,7 +1445,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/ratings_controller.rb": {
+      "/web/app/controllers/ratings_controller.rb": {
         "lines": [
           1,
           1,
@@ -1487,7 +1487,7 @@
           null
         ]
       },
-      "/Users/mateuszlata/Projects/AGAI/app/controllers/steps_controller.rb": {
+      "/web/app/controllers/steps_controller.rb": {
         "lines": [
           1,
           1,
@@ -1540,6 +1540,6 @@
         ]
       }
     },
-    "timestamp": 1629545609
+    "timestamp": 1631053826
   }
 }

@@ -1,24 +1,25 @@
-# README
+# AGAI
+## Web application for planning and managing learning stages for new activities and sharing them within the website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Setting up the project
+Follow these steps to get our service running on you computer.
 
-Things you may want to cover:
+1. The Docker should be installed on your system. You can follow [the instruction](https://docs.docker.com/engine/install/) provided by Docker Team.
 
-* Ruby version
+2. Building the app with Docker
+In terminal, type the following commands:
 
-* System dependencies
+  `docker compose build app` &rarr; builds an image
 
-* Configuration
+  `docker compose run app bash`&rarr; opens bash terminal
 
-* Database creation
+  `rails db:create db:migrate db:seed`&rarr; creates database, runs the migrations, and makes seeds which are required.
 
-* Database initialization
+  **Then exit the bash console and run:**
 
-* How to run the test suite
+  `docker compose up` &rarr; composes the containers and runs the application
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Running tests
+Attach new shell and type the following command in the terminal:
 
-* Deployment instructions
-
-* ...
+  `bundle exec rspec -fd` &rarr; runs tests
