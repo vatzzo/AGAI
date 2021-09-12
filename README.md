@@ -19,6 +19,8 @@ In terminal, type the following commands:
 
 `docker compose up` &rarr; composes the containers and runs the application
 
+The application will be available at localhost:3000. Accounts are predefined in seed.rb - use one to log in or create your own.
+
 3. Running tests
 Attach new shell and type the following command in the terminal:
 
